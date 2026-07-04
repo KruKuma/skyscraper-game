@@ -69,7 +69,7 @@ int	check_col(int grid[4][4], int col, int top, int bottom)
 		return (0);
 	while (i < 4)
 	{
-		line[i] = grid[i][col];
+		line[i] = grid[3 - i][col];
 		i++;
 	}
 	if (count_visible(line) != bottom)

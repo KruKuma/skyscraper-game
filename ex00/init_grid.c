@@ -1,34 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   init_grid.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nfurst <nfurst@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/04 09:54:47 by nfurst            #+#    #+#             */
-/*   Updated: 2026/07/04 11:14:07 by nfurst           ###   ########.fr       */
+/*   Created: 2026/07/04 11:10:26 by nfurst            #+#    #+#             */
+/*   Updated: 2026/07/04 11:14:04 by nfurst           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	print_error(void);
-int		parse_input(char *str, int views[16]);
-int		init_grid(int grid[4][4]);
-
-int	main(int argc, char *argv[])
+void	init_grid(int grid[4][4])
 {
-	int	grid[4][4];
-	int	views[16];
+	int row;
+	int col;
 
-	if (argc != 2)
+	row = 0;
+	while (row < 4)
 	{
-		print_error();
-		return (1);
+		col = 0;
+		while (col < 4)
+		{
+			grid[row][col] = 0;
+			col++;
+		}
+		row++;
 	}
-	if (!parse_input(argv[1], views))
-	{
-		print_error();
-		return (1);
-	}
-	init_grid(grid);
-	return (0);
 }

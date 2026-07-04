@@ -6,14 +6,14 @@
 /*   By: nfurst <nfurst@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/04 11:10:26 by nfurst            #+#    #+#             */
-/*   Updated: 2026/07/04 11:14:04 by nfurst           ###   ########.fr       */
+/*   Updated: 2026/07/04 11:27:55 by nfurst           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	init_grid(int grid[4][4])
 {
-	int row;
-	int col;
+	int	row;
+	int	col;
 
 	row = 0;
 	while (row < 4)

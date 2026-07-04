@@ -6,7 +6,7 @@
 /*   By: nfurst <nfurst@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/04 11:17:43 by nfurst            #+#    #+#             */
-/*   Updated: 2026/07/04 11:23:36 by nfurst           ###   ########.fr       */
+/*   Updated: 2026/07/04 11:28:10 by nfurst           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	print_grid(int grid[4][4])
 {
-	int	row;
-	int	col;
+	int		row;
+	int		col;
 	char	c;
 
 	row = 0;

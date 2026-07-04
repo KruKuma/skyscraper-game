@@ -61,5 +61,16 @@ int	check_col(int grid[4][4], int col, int top, int bottom)
 
 int	check_all_views(int grid[4][4], int views[16])
 {
+	int	i;
+
+	i = 0;
+	while (i < 4)
+	{
+		if (!check_col(grid, i, views[i], views[i + 4]))
+			return (0);
+		if (!check_col(grid, i, views[i + 8], views[i + 12]))
+			return (0);
+		i++;
+	}
 	return (1);
 }

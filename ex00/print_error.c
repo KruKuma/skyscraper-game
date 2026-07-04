@@ -6,13 +6,13 @@
 /*   By: nfurst <nfurst@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/04 10:28:04 by nfurst            #+#    #+#             */
-/*   Updated: 2026/07/04 10:30:34 by nfurst           ###   ########.fr       */
+/*   Updated: 2026/07/04 11:04:55 by nfurst           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	print_error()
+void	print_error(void)
 {
 	write(1, "Error\n", 6);
 }

@@ -6,19 +6,17 @@
 /*   By: nfurst <nfurst@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/04 09:54:47 by nfurst            #+#    #+#             */
-/*   Updated: 2026/07/04 10:56:43 by nfurst           ###   ########.fr       */
+/*   Updated: 2026/07/04 11:05:57 by nfurst           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	print_error();
-int	parse_input(char *str, int views[16]);
+void	print_error(void);
+int		parse_input(char *str, int views[16]);
 
-#include <stdio.h>
-
-int main(int argc, char *argv[])
+int	main(int argc, char *argv[])
 {
-	int grid[4][4];
-	int views[16];
+	int	grid[4][4];
+	int	views[16];
 
 	if (argc != 2)
 	{

@@ -6,7 +6,7 @@
 /*   By: nfurst <nfurst@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/04 14:49:32 by nfurst            #+#    #+#             */
-/*   Updated: 2026/07/04 15:22:38 by nfurst           ###   ########.fr       */
+/*   Updated: 2026/07/04 15:29:42 by nfurst           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,24 @@ int	count_visible(int line[4])
 
 int	check_row(int grid[4][4], int row, int left, int right)
 {
+	int	line[4];
+	int	i;
+
+	i = 0;
+	while (i < 4)
+	{
+		line[i] = grid[row][i];
+		i++;
+	}
+	if (count_visible(line) != left)
+		return (0);
+	while (i < 4)
+	{
+		line[i] = grid[row][3 - i];
+		i++;
+	}
+	if (count_visible(line) != right)
+		return (0);
 	return (1);
 }
 

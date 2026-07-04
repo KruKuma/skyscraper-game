@@ -38,6 +38,24 @@ int	check_row(int grid[4][4], int row, int left, int right)
 
 int	check_col(int grid[4][4], int col, int top, int bottom)
 {
+	int	line[4];
+	int	i;
+
+	i = 0;
+	while (i < 4)
+	{
+		line[i] = grid[i][col];
+		i++;
+	}
+	if (count_visible(line) != top)
+		return (0);
+	while (i < 4)
+	{
+		line[i] = grid[i][col];
+		i++;
+	}
+	if (count_visible(line) != bottom)
+		return (0);
 	return (1);
 }
 

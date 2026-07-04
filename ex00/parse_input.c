@@ -6,14 +6,14 @@
 /*   By: nfurst <nfurst@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/04 10:37:50 by nfurst            #+#    #+#             */
-/*   Updated: 2026/07/04 10:58:04 by nfurst           ###   ########.fr       */
+/*   Updated: 2026/07/04 11:03:09 by nfurst           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	parse_input(char *str, int views[16])
 {
-	int i;
-	int count;
+	int	i;
+	int	count;
 
 	i = 0;
 	count = 0;
@@ -32,8 +32,8 @@ int	parse_input(char *str, int views[16])
 				return (0);
 			i++;
 		}
-		if (count != 16)
-			return (0);
 	}
+	if (count != 16)
+		return (0);
 	return (1);
 }

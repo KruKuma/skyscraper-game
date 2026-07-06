@@ -178,6 +178,10 @@ The program does not use `printf`, `atoi`, `malloc`, or `free`.
 
 The grid size is fixed to 4x4 for the mandatory part of the project.
 
+## Bonus / Future improvement
+
+A future version of this project will generalize the solver from a fixed 4x4 grid to variable grid sizes up to 9x9.
+
 ## Author
 
 KruKuma

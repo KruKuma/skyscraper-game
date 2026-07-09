@@ -10,14 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	check_all_views(int grid[4][4], int views[16]);
+int	check_all_views(int grid[9][9], int views[36], int size);
 
-int	is_valid_number(int grid[4][4], int row, int col, int nb)
+int	is_valid_number(int grid[9][9], int size, int row, int col, int nb)
 {
 	int	i;
 
 	i = 0;
-	while (i < 4)
+	while (i < size)
 	{
 		if (grid[row][i] == nb)
 			return (0);
@@ -28,23 +28,23 @@ int	is_valid_number(int grid[4][4], int row, int col, int nb)
 	return (1);
 }
 
-int	solve(int grid[4][4], int views[16], int pos)
+int	solve(int grid[9][9], int views[36], int pos, int size)
 {
 	int	row;
 	int	col;
 	int	nb;
 
-	if (pos == 16)
-		return (check_all_views(grid, views));
-	row = pos / 4;
-	col = pos % 4;
+	if (pos == size * size)
+		return (check_all_views(grid, views, size));
+	row = pos / size;
+	col = pos % size;
 	nb = 1;
-	while (nb <= 4)
+	while (nb <= size)
 	{
-		if (is_valid_number(grid, row, col, nb))
+		if (is_valid_number(grid, size, row, col, nb))
 		{
 			grid[row][col] = nb;
-			if (solve(grid, views, pos + 1))
+			if (solve(grid, views, pos + 1, size))
 				return (1);
 			grid[row][col] = 0;
 		}

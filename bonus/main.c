@@ -11,15 +11,15 @@
 /* ************************************************************************** */
 
 void	print_error(void);
-void	print_grid(int grid[4][4]);
-int		parse_input(char *str, int views[16]);
-int		init_grid(int grid[4][4]);
-int		solve(int grid[4][4], int views[16], int pos);
+void	print_grid(int grid[9][9]);
+int		parse_input(char *str, int views[36]);
+int		init_grid(int grid[9][9]);
+int		solve(int grid[9][9], int views[36], int pos);
 
 int	main(int argc, char *argv[])
 {
-	int	grid[4][4];
-	int	views[16];
+	int	grid[9][9];
+	int	views[36];
 
 	if (argc != 2)
 	{

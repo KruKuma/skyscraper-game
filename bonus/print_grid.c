@@ -12,21 +12,21 @@
 
 #include <unistd.h>
 
-void	print_grid(int grid[4][4])
+void	print_grid(int grid[9][9], int size)
 {
 	int		row;
 	int		col;
 	char	c;
 
 	row = 0;
-	while (row < 4)
+	while (row < size)
 	{
 		col = 0;
-		while (col < 4)
+		while (col < size)
 		{
 			c = grid[row][col] + '0';
 			write(1, &c, 1);
-			if (col < 3)
+			if (col < size - 1)
 				write(1, " ", 1);
 			col++;
 		}
